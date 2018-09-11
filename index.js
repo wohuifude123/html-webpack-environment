@@ -1,11 +1,15 @@
-function HelloWorldPlugin(options) {
+function OperateEnvironmentPlugin(options) {
     // 使用配置（options）设置插件实例
 }
 
-HelloWorldPlugin.prototype.apply = function(compiler) {
+OperateEnvironmentPlugin.prototype.apply = function(compiler) {
+    var self = this;
+    var body = [];
+    var head = [];
+    
     compiler.plugin('done', function() {
-        console.log('你的实际风景是什么');
+        console.log('where');
     });
 };
 
-module.exports = HelloWorldPlugin;
+module.exports = OperateEnvironmentPlugin;
